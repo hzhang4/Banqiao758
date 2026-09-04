@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'zh' }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="0; url={{ page.redirect_to }}">
+<link rel="canonical" href="{{ page.redirect_to }}">
+<title>{{ site.title }}</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", Helvetica, Arial, sans-serif; background: #f6f3ec; color: #24211b; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 1.5rem; text-align: center; }
+  a { color: #6a3226; }
+</style>
+</head>
+<body>
+  <p>
+    {% if page.lang == 'en' %}
+    This site has moved. Redirecting to <a href="{{ page.redirect_to }}">{{ page.redirect_to }}</a>&hellip;
+    {% else %}
+    本站已迁移，正在跳转至 <a href="{{ page.redirect_to }}">{{ page.redirect_to }}</a>&hellip;
+    {% endif %}
+  </p>
+</body>
+</html>
